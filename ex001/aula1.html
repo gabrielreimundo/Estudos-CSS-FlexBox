@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*COMO FUNCIONA O FLEX*/
+        /*containers por padrão vem como block, usando o flex isso muda*/
+        .item{
+            margin: 5px;
+            padding: 5px;
+            background: #447;
+            text-align: center;
+            font-size: 1em;
+            color: #fff;
+        }
+        .container{
+            max-width: 600px;
+            height: 600px;
+            margin: auto;
+            border: 1px solid #000;
+        }
+
+        .flexivel{
+            display: flex;
+        }
+
+        body{
+            font-family: arial;
+            color: #000;
+        }
+        /*                  |
+                            |
+                            |
+                            |
+        main axis           |
+        -------------------------------------------->
+                            |
+                            |cross axis
+                            |
+                            |    
+                            v    
+        main axis = eixo principal
+        cross axis = eixo secundario
+
+        propriedades como flex direction mudam esses eixos
+
+        existem propriedades PARA containers e
+        existem propriedades PARAS items.
+        */
+    </style>
+</head>
+<body>
+    <div class="container flexivel">
+        <div class="item">CFB Cursos 1</div>
+        <div class="item">CFB Cursos 2</div>
+        <div class="item">CFB Cursos 3</div>
+        <div class="item">CFB Cursos 4</div>
+        <div class="item">CFB Cursos 5</div>
+        <div class="item">CFB Cursos 6</div>
+        <div class="item">CFB Cursos 7</div>
+        <div class="item">CFB Cursos 8</div>
+        <div class="item">CFB Cursos 9</div>
+        <div class="item">CFB Cursos 10</div>
+
+    </div>
+</body>
+</html>
