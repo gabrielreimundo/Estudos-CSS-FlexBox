@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /*FLEX-WRAP
+        flex-wrap define a quebra de linha do container flexivel
+        SI for possivel uma quebra de linha   
+        */
         .item{
             margin: 5px;
             padding: 5px;
@@ -18,11 +22,7 @@
             max-width: 600px;
             margin: auto;
             border: 1px solid #000;
-            flex-direction: column-reverse;
-        }/*o padrão do flex-direction é row*/
-         /*column muda o eixo main axis para vertical de cima para baixo
-         row-reverse muda somente a direção do main axis
-         column reverse faz o mesmo soque com o eixo cross*/
+        }
         .flexivel{
             display: flex;
         }
@@ -32,6 +32,12 @@
         .vertical {
             flex-direction: column;
         }
+        .quebra {
+            flex-wrap: wrap;
+        }
+        /*nowrap = sem quebra de linha(padrão)
+           wrap = quebra a linha
+           wrap-reverse = qurebra invertida*/
         body{
             font-family: arial;
             color: #000;
@@ -39,7 +45,7 @@
     </style>
 </head>
 <body>
-    <div class="container flexivel vertical">
+    <div class="container flexivel horizontal quebra">
         <div class="item">CFB Cursos 1</div>
         <div class="item">CFB Cursos 2</div>
         <div class="item">CFB Cursos 3</div>
