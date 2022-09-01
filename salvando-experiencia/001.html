@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /*ALIGN-ITEMS
-         aling-tems define o alinhamento dos elementos no eixo crossaxis, se o flex direction estiver em column o eixo cross ficara na horizontal
-        *//*ASSISTA A AULA 6 NOVAMENTE*/
+        /*ALIGN-CONTENT
+          trabalha no eixo cross axis igual ao aling-items e de forma muito semelhante.
+        */
         .item{
             margin: 5px;
             padding: 5px;
@@ -16,8 +16,7 @@
             text-align: center;
             font-size: 1em;
             color: #fff;
-            height: 30px;
-            width: calc(33.3333% - 20px);/*É so uma questão de raciocinio logico.*/
+            width: calc(33.3333% - 20px);
         }
         .container{
             max-width: 600px;
@@ -25,13 +24,9 @@
             margin: auto;
             border: 1px solid #000;
             justify-content: center;/*main axis*/
-            align-items: center;/*cross axis*/
-        }/*stretch faz os itens ficarem na altura da div quando sem heigth definido(valor padrão da propriedade aling-itens)
-        flex-start = inicio do eixo secundario
-        flex-end = final do eixo secundario
-        center = centro
-        baseline = linha base ?
-        */
+            align-items: stretch;/*cross axis*/
+           /* align-content: center;/*cross axis*/
+        }
         .flexivel{
             display: flex;
         }
