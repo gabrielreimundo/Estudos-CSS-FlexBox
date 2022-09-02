@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /*FLEX-SHRINK
-          flex-shrink indica se o elemento podera ou não ser reduzido dentro do container.
-          vai determinar a capacidade de um elemento reduzir para caber dentro do container
+        /*ALING-SELF
+        permite agente configurar o alinhamento de um unico item dentro de um grupo de elementos.
+        observe qual o flex-direction para verificar onde o alinhamento do aling-self vai ser aplicado dentro do container
         */
         .item{
             margin: 5px;
@@ -17,7 +17,6 @@
             text-align: center;
             font-size: 1em;
             color: #fff;
-            width: 200px;
         }
         .container{
             max-width: 600px;
@@ -87,15 +86,30 @@
             order: 3;
         }
         /*----------flex-shrink-------------*/
-        /*quanto maior o valor do flex-shrink maior a capacidade de redução do elemento*/
         .reduzir0 {
             flex-shrink: 0;
-        }/*0 = perdeu a capacidade de reduzir*/
+        }
         .reduzir1 {
             flex-shrink: 1;
-        }/*flex-shronk 1 = padrao*/
+        }
         .reduzir2 {
             flex-shrink: 2;
+        }
+        /*--------propriedade-flex------------*/
+        .flex0 {
+            flex: 3 2 200px;
+            /*=
+            flex-grow:3;
+            flex-shrink:2;
+            flex-basis:200px;
+            */
+        }
+        /*------------aling-self------------*/
+        .inicio {
+            align-self: flex-start;
+        }
+        .final {
+            align-self: flex-end;
         }
         body{
             font-family: arial;
@@ -105,10 +119,9 @@
 </head>
 <body>
     <div class="container flexivel horizontal ">
-        <div class="item tam1 ordem0 reduzir0">CFB Cursos 1</div>
-        <div class="item tam1 ordem1 reduzir1">CFB Cursos 2</div>
-        <div class="item tam1 ordem2 reduzir2">CFB Cursos 3</div>
-        <div class="item tam1 ordem3 reduzir0">CFB Cursos 4</div>
+        <div class="item flex0 inicio">CFB</div>
+        <div class="item flex0">CFB Cursos</div>
+        <div class="item flex0 final">CFB Cursos CFB Cursos</div>
     </div>
 </body>
 </html>
