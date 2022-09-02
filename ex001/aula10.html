@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /*FLEX-BASIS
-          flex-basis pode forçar um item a ter um tamanho.
+        /*ORDER
+          order serve para redefinir a ordem dos elementos,
         */
         .item{
             margin: 5px;
@@ -54,8 +54,7 @@
         .tam3{
             flex-grow: 3;
         }
-        /*----------------------------*/
-        /*flex-basis*/
+        /*------------flex-basis-----------*/
         .basea{
             flex-basis: auto;
         }/*auto = padrão*/
@@ -71,6 +70,20 @@
         .base3{
             flex-basis: 3;
         }
+        /*----------------order------------*/
+        /*tambem pode trabalhar com numeros negativos, numeros negativos aparecem primeiro na fila.*/
+        .ordem0 {
+            order: 0;
+        }
+        .ordem1 {
+            order: 1;
+        }
+        .ordem2 {
+            order: 2;
+        }
+        .ordem3 {
+            order: 3;
+        }
         body{
             font-family: arial;
             color: #000;
@@ -79,10 +92,10 @@
 </head>
 <body>
     <div class="container flexivel horizontal quebra">
-        <div class="item tam1 base0">CFB</div>
-        <div class="item tam1 base0">CFB Cursos</div>
-        <div class="item tam1 base0">CFB Cursos 3</div>
-        <div class="item tam1 base0">CFB Cursos CFB Cursos</div>
+        <div class="item tam1 base0 ordem0">CFB Cursos 1</div>
+        <div class="item tam1 base0 ordem1">CFB Cursos 2</div>
+        <div class="item tam1 base0 ordem2">CFB Cursos 3</div>
+        <div class="item tam1 base0 ordem3">CFB Cursos 4</div>
     </div>
 </body>
 </html>
