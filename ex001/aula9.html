@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*FLEX-BASIS
+          
+        */
+        .item{
+            margin: 5px;
+            padding: 5px;
+            background: #447;
+            text-align: center;
+            font-size: 1em;
+            color: #fff;
+        }
+        .container{
+            max-width: 600px;
+            height: 400px;
+            margin: auto;
+            border: 1px solid #000;
+            justify-content: center;/*main axis*/
+            /*align-items: flex-start;/*cross axis*/
+            align-content: space-between;/*cross axis*/
+        }
+        .flexivel{
+            display: flex;
+        }
+        .horizontal {
+            flex-direction: row;
+        }
+        .vertical {
+            flex-direction: column;
+        }
+        .fluxo-horizontal-sem-quebra{
+            flex-flow: row nowrap;
+        }
+        .quebra {
+            flex-wrap: wrap;
+        }
+        /*FLEX-GROW*/
+        .tam0{
+            flex-grow: 0;
+        }
+        .tam1{
+            flex-grow: 1;
+        }
+        .tam2{
+            flex-grow: 2;
+        }
+        .tam3{
+            flex-grow: 3;
+        }
+        /*----------------------------*/
+        body{
+            font-family: arial;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container flexivel horizontal quebra">
+        <div class="item tam1">CFB Cursos 1</div>
+        <div class="item tam1">CFB Cursos 2</div>
+        <div class="item tam1">CFB Cursos 3</div>
+    </div>
+</body>
+</html>
